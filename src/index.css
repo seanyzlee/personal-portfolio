@@ -1,13 +1,275 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+header {
+    padding-top: 1em;
+}
+.container {
+
+  border: 0rem solid #efbc9b;
+  background-color: #F0E6EF;
+  border-radius: 20px;
+  opacity: 1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logos-container img {
+  max-width: 100%;
+  width: 5em;
+  height: 5em;
+  justify-content: flex-end;
+  float: right;
+  margin-right: 1.5em;
+  margin-top: 0.5em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  margin-left: 22px;
+  justify-content: space-between;
+  padding: 0.5em 4em; /* Adjust padding for smaller screens */
+  display: inline-block;
+  text-align: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.links {
+  text-decoration: none;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+  width: 90%;
+  height: auto;
+  margin-inline: auto;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.2);
+  background-size: 44px 44px;
+  background-image:  repeating-linear-gradient(0deg, #efefef, #efefef 0.2px, #ffffff 1.2px, #ffffff);
+}
+
+.contentWrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+.homecontent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 3fr));
+  gap: 1rem;
+  margin-top: 10rem; /* Adjust margin for smaller screens */
+}
+
+.projectbox {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  position: relative;
+  left: 1vw;
+}
+
+.homecontent h2 {
+  display: inline;
+  position: relative;
+  font-size: 27px;
+  text-align: center;
+  bottom: 3vh;
+  left: 0vw;
+  text-decoration: underline;
+}
+
+.smallTextContent {
+  color: black;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  gap: 1em;
+  top: 2em;
+  left: 0em;
+  
+}
+
+.smallTextContent p {
+    line-height: 2.6;
+}
+
+.textWrapper {
+  width: 97%;
+  max-width: 100%;
+  display: flexbox;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  padding-top: 1.5em;
+  position: relative;
+  top:3em;
+  padding-left: 1.7em;
+}
+
+.textWrapper h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 9 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.3em; /* Adjust as needed */
+  animation: 
+    typing 1.75s steps(50, end),
+    blink-caret .75s step-end infinite;
+}
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 0, 0); }
+  }
+
+  hr {
+    margin: 7em auto;
+    position: relative;
+    height: 9px;
+    width: 9px;
+    border: transparent;
+    overflow: visible;
+    background-image: url('data:image/svg+xml;utf8,<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.5" width="8" height="8" rx="4" fill="%231CB0A8" /></svg>');
+    
+    &:before {
+      position: absolute;
+      height: 9px;
+      width: 9px;
+      content: '';
+      background-image: url('data:image/svg+xml;utf8,<svg width="10" height="9" viewBox="0 0 10 9" xmlns="http://www.w3.org/2000/svg"><path d="M3.91043 1.29752C4.30449 0.688518 5.19551 0.688519 5.58957 1.29752L9.25143 6.95675C9.68196 7.62211 9.20436 8.5 8.41186 8.5H1.08814C0.29564 8.5 -0.181954 7.62211 0.248574 6.95675L3.91043 1.29752Z" fill="%23FCB643" /></svg>');
+      left: -18px;
+    }
+    
+    &:after {
+      position: absolute;
+      height: 9px;
+      width: 9px;
+      content: '';
+      background-image: url('data:image/svg+xml;utf8,<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.5" width="8" height="8" rx="1" fill="%23EF4056" /></svg>');
+      right: -18px;    
+    }
+  }
+
+
+.aboutWrapper { 
+    width:100%;
+}
+
+.aboutText {
+    width: 40%;
+}
+.aboutWrapper h3{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.aboutWrapper p{ 
+    font-size: 20px;
+    line-height: 2.5;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    float: right;
+    position: relative;
+    bottom: 25.3em;
+
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    max-width: 20%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 9px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 30px;
+    
+  }
+
+.footerWrapper img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    float: right;
+    position: relative;
+    
+    max-width: 40%;
+    bottom: 15.3em;
+
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 30px;
+}
+
+
+.footerWrapper{
+    position: relative;
+    bottom:15em;
+    align-items: center;
+}
+.footerWrapper h4 {
+    font-size: 3em;
+    width:50%;
+    text-align: center;
+    display:flex;
+    position: relative;
+    top:4em
+}
+
+.danger {
+    background-color: #f5f1bb;
+    display: flex;
+    border-left: 6px solid #f1f436;
+    position: relative;
+    top:0em;
+    width: 100%;
+  }
+
+  .danger p {
+    text-align: center;
+    position: relative;
+    left:2em;
+
+  }
+  
+@media screen and (max-width: 600px) {
+    .textWrapper h1{
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .textWrapper h1{
+        font-size: 2vw;
+    }
 }

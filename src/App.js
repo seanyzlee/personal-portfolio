@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//pages and components
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import WOW from "wowjs";
+
+class App extends React.Component {
+  // Defining WOW
+  componentDidMount() {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <div className="pages">
+            <Routes>
+              <Route path="/" element={<Home />} />
+
+           
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
-
 export default App;
